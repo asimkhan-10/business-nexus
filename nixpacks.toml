@@ -1,0 +1,15 @@
+# nixpacks.toml (repo root)
+[nixpacks]
+version = 1
+
+[phases.setup]
+# Use Node 20 (adjust if you need another)
+nixPkgs = ["nodejs_20"]
+
+[phases.install]
+# Install deps inside the server/ folder
+cmds = ["cd server && npm ci"]
+
+[start]
+# Start your API from server/
+cmd = "cd server && npm start"
