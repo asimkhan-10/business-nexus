@@ -1,0 +1,10 @@
+[build]
+  base = "client"          # cd into client first
+  command = "npm run build"
+  publish = "dist"         # Vite outputs to dist
+
+# Single Page App (send 404s to index.html)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
